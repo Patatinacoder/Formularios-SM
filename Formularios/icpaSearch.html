@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de ICPAS</title>
+    <link rel="stylesheet" href="../css/icpaSearch.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Búsqueda de ICPAS</h1>
+        <div class="search-container">
+            <form id="icpaForm" onsubmit="buscarICPAS(); return false;">
+                <label for="termino">Término relacionado:</label>
+                <input type="text" id="termino" name="termino" required>
+                <div class="button-container">
+                    <input type="submit" value="Buscar">
+                    <input type="button" value="Limpiar búsqueda" onclick="limpiarBusqueda()">
+                </div>
+            </form>
+        </div>
+        <div id="resultado"></div>
+        <h2>ICPAS seleccionados:</h2>
+        <div id="listaICPAS"></div>
+        <label for="datosExtra">Datos extra:</label>
+        <input type="text" id="datosExtra" name="datosExtra">
+        <div class="button-container">
+            <input type="button" value="Generar" onclick="generarProteccion()">
+            <input type="button" value="Copiar resultado" onclick="copiarResultadoAlPortapapeles()">
+        </div>
+        <div id="resultadoProteccion"></div>
+        <div class="button-container">
+            <input type="button" value="Limpiar formulario" onclick="limpiarFormulario()">
+            <input type="button" value="Volver" onclick="window.location.href='index.html'"> <!-- Redirige al HTML inicial -->
+        </div>
+    </div>
+    <script src="../js/icpaSearch.js"></script>
+</body>
+</html>

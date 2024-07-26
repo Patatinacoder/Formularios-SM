@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Asesorías</title>
+    <link rel="stylesheet" href="/css/asesorias.css">
+    <script src="../js/asesorias.js" defer></script>
+</head>
+<body>
+    <h2>Formulario de Asesorías</h2>
+    <form id="asesoriaForm" action="#" onsubmit="ordenarFormulario(); return false;">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="correo" name="correo"><br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono"><br><br>
+
+        <label for="detalles">Detalles:</label><br>
+        <textarea id="detalles" name="detalles" rows="4" cols="50"></textarea><br><br>
+
+        <label>¿Es marca registrada?</label><br>
+        <input type="radio" id="marcaRegistradaSi" name="marcaRegistrada" value="si" onclick="toggleRegistroMarca();"> Sí<br>
+        <input type="radio" id="marcaRegistradaNo" name="marcaRegistrada" value="no" onclick="toggleRegistroMarca();" checked> No<br><br>
+
+        <div id="registroMarca">
+            <label for="numeroRegistro">Número de Registro:</label><br>
+            <input type="text" id="numeroRegistro" name="numeroRegistro"><br><br>
+
+            <label for="nombreMarca">Nombre de la Marca:</label><br>
+            <input type="text" id="nombreMarca" name="nombreMarca"><br><br>
+
+            <label for="titular">Titular:</label><br>
+            <input type="text" id="titular" name="titular"><br><br>
+
+            <label for="rutTitular">RUT Titular:</label><br>
+            <input type="text" id="rutTitular" name="rutTitular"><br><br>
+        </div>
+
+        <input type="submit" value="Ordenar Formulario">
+        <input type="reset" value="Limpiar formulario" onclick="limpiarFormulario();">
+    </form>
+
+    <div id="resultado"></div>
+
+    <input type="button" value="Copiar resultado" onclick="copiarResultado()">
+    <input type="button" value="Volver" onclick="window.location.href = 'index.html';">
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Respuesta de Cliente</title>
+    <link rel="stylesheet" href="../css/clienteResponde.css">
+</head>
+<body>
+    <h2>Respuesta de Cliente</h2>
+    <form id="formulario" action="#" onsubmit="ordenarDatos(); return false;">
+        <label for="respuesta_cliente">Cliente responde: </label><br>
+        <textarea id="respuesta_cliente" name="respuesta_cliente" rows="4" cols="50"></textarea><br><br>
+
+        <label for="marca">Marca:</label><br>
+        <input type="text" id="marca" name="marca"><br><br>
+
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="correo" name="correo"><br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono"><br><br>
+
+        <input type="submit" value="Ordenar Formulario">
+        <input type="reset" value="Limpiar formulario" onclick="limpiarFormulario();">
+    </form>
+
+    <div id="resultado"></div>
+
+    <button type="button" onclick="copiarAlPortapapeles()">Copiar Resultado</button>
+    <button onclick="window.location.href = 'index.html';">Volver</button>
+
+    <script src="../js/clienteResponde.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Uso de Seguro</title>
+    <link rel="stylesheet" href="../css/seguros.css">
+</head>
+<body>
+    <h2>Uso de Seguro Cliente Simple Marcas</h2>
+    <form id="formulario" action="#" onsubmit="ordenarDatos(); return false;">
+        <label for="marca">Marca:</label><br>
+        <input type="text" id="marca" name="marca"><br><br>
+
+        <label for="desea_registrar">Desea registrar:</label><br>
+        <input type="text" id="desea_registrar" name="desea_registrar"><br><br>
+
+        <label for="protege">Protege:</label><br>
+        <input type="text" id="protege" name="protege"><br><br>
+
+        <input type="submit" value="Ordenar Formulario">
+        <input type="reset" value="Limpiar formulario" onclick="limpiarFormulario();">
+    </form>
+
+    <div id="resultado"></div>
+
+    <button type="button" onclick="copiarAlPortapapeles()">Copiar Resultado</button>
+    <button onclick="window.location.href = 'index.html';">Volver</button>
+
+    <script src="../js/seguros.js"></script>
+</body>
+</html>

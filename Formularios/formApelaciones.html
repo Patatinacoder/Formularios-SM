@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Apelación</title>
+    <link rel="stylesheet" href="../css/apelaciones.css">
+</head>
+<body>
+    <h2>Formulario Apelación</h2>
+    <form id="formulario" action="#" onsubmit="ordenarDatos(); return false;">
+        <label for="titular">Titular:</label><br>
+        <input type="text" id="titular" name="titular"><br><br>
+
+        <label for="rut_titular">RUT Titular:</label><br>
+        <input type="text" id="rut_titular" name="rut_titular"><br><br>
+
+        <label for="numero_solicitud">Número de solicitud:</label><br>
+        <input type="text" id="numero_solicitud" name="numero_solicitud"><br><br>
+
+        <label for="marca">Marca:</label><br>
+        <input type="text" id="marca" name="marca"><br><br>
+
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="correo" name="correo"><br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono"><br><br>
+
+        <label for="fecha_plazo">Fecha límite para apelar:</label><br>
+        <input type="date" id="fecha_plazo" name="fecha_plazo"><br><br>
+
+        <label for="detalles">Detalles:</label><br>
+        <textarea id="detalles" name="detalles" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Ordenar Formulario">
+        <input type="reset" value="Limpiar formulario" onclick="limpiarFormulario();">
+    </form>
+
+    <div id="resultado"></div>
+
+    <input type="button" value="Copiar resultado" onclick="copiarResultado()">
+    <input type="button" value="Volver" onclick="window.location.href = 'index.html';">
+
+    <script src="../js/apelaciones.js"></script>
+</body>
+</html>
